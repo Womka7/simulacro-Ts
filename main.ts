@@ -15,8 +15,9 @@ loginForm.addEventListener('submit', async (event: Event) => {
     password: passwordUser.value
   }
   const pageController =new PageController(url);
-  const token = await pageController.login(user,'login')
-  console.log(token);
+  const responseOfLogin = await pageController.login(user,'login')
+  console.log(responseOfLogin.token);
+  sessionStorage.setItem('token',responseOfLogin.token)
   
 
 });
