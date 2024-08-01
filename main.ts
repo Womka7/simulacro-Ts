@@ -14,10 +14,20 @@ loginForm.addEventListener('submit', async (event: Event) => {
     email: emailUser.value,
     password: passwordUser.value
   }
-  const pageController =new PageController(url);
-  const responseOfLogin = await pageController.login(user,'login')
-  console.log(responseOfLogin.token);
-  sessionStorage.setItem('token',responseOfLogin.token)
-  
-
+  try {
+    const pageController =new PageController(url);
+    const responseOfLogin = await pageController.login(user,'login')
+    console.log(responseOfLogin.token);
+    sessionStorage.setItem('token',responseOfLogin.token)
+    
+    const getToken = sessionStorage.getItem('token');
+    if (getToken){
+      alert('Se inicia la sesion')
+      window.location.href = './src/views/home.html'
+    }
+    
+  } catch (e) {
+    console.log(e);
+    
+  }
 });

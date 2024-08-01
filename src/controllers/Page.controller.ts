@@ -1,11 +1,12 @@
-import { ILogin } from "../models/ILogin";
+import { ILogin, ResponseLogin } from "../models/ILogin";
 
 export class PageController {
+    tokenLog: string | undefined ;
     url: string;
     constructor(url: string) {
         this.url = url;
     }
-    async login(data: ILogin, endPoint: string) {
+    async login(data: ILogin, endPoint: string): Promise<ResponseLogin> {
         const response = await fetch(`${this.url}${endPoint}`, {
             method: 'POST',
             headers: {
@@ -13,7 +14,14 @@ export class PageController {
             },
             body: JSON.stringify(data)
         });
-        const token = response.json();
-        return token;
+        if (response.status != 200) {
+            throw new Error('Error al iniciar sesión');
+        }else{
+            alert('bienvenido')
+        }
+        
+        const responseLogin  = await response.json();
+        this.tokenLog = responseLogin.token;
+        return responseLogin;;
     }
 }
