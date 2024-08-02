@@ -22,6 +22,6 @@ export class PageController {
         
         const responseLogin  = await response.json();
         this.tokenLog = responseLogin.token;
-        return responseLogin;;
+        return responseLogin;
     }
 }
