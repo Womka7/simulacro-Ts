@@ -47,3 +47,9 @@ async function showCities() {
 }
 
 showCities();
+
+
+document.addEventListener('click', (event:Event) => {
+    const target = event.target as HTMLElement;
+    
+})
