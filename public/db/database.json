@@ -1,9 +1,35 @@
 {
-    "city":[{
-        "city":"Bogota",
-        "country":"Colombia", 
-        "date": "2024-08-01T17:18:29.6392",
-        "cityDescription":"hola como estas"
-
-    }]
+  "city": [
+    {
+      "city": "Bogota",
+      "country": "Colombia",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajIEArYzWnWBHJrCywe10S_pfzvMaxFL0Hw&s",
+      "date": "2024-08-01T17:18:29.6392",
+      "cityDescription": "hola como estas"
+    },
+    {
+      "id": "7687",
+      "city": "medellin",
+      "country": "colombia",
+      "image": "https://cdn.baquianos.com/img/blog/2019/23/cali-rnrx360.jpg",
+      "date": "2024-08-02T13:02:18.851Z",
+      "cityDescription": "hualaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": "885d",
+      "city": "guarne",
+      "country": "df",
+      "image": "https://cdn.baquianos.com/img/blog/2019/23/cali-rnrx360.jpg",
+      "date": "2024-08-02T14:38:32.501Z",
+      "cityDescription": "nbgn"
+    },
+    {
+      "id": "62e1",
+      "city": "bolibar",
+      "country": "colombia",
+      "image": "https://cdn.baquianos.com/img/blog/2019/23/cali-rnrx360.jpg",
+      "date": "2024-08-02T14:59:08.088Z",
+      "cityDescription": "fds"
+    }
+  ]
 }

@@ -17,11 +17,13 @@ loginForm.addEventListener('submit', async (event: Event) => {
   try {
     const pageController =new PageController(url);
     const responseOfLogin = await pageController.login(user,'login')
+
     console.log(responseOfLogin.token);
+
     sessionStorage.setItem('token',responseOfLogin.token)
     
     const getToken = sessionStorage.getItem('token');
-    if (getToken){
+    if (getToken === responseOfLogin.token){
       alert('Se inicia la sesion')
       window.location.href = './src/views/home.html'
     }
