@@ -1,3 +1,4 @@
+import { IWeatherCity } from "../models/IWeatherCity";
 import { Card } from "./Card";
 import { CitiesController } from "./Cities.controller";
 import { Spinner } from "./Spinner";
@@ -38,10 +39,10 @@ async function showCities() {
 
     console.log(cities);
     
-    cities.forEach(async(city) => {
-        const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city.city}&appid=5de2fb58f0a1a27e27839a3f73899ae9`)
-        const data = await response.json();
-        cardSection?.append(Card(city, data.main.temp))
+    cities.forEach(async(ciudad) => {
+        const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${ciudad.city}&appid=5de2fb58f0a1a27e27839a3f73899ae9`)
+        const data: IWeatherCity = await response.json();
+        cardSection?.append(Card(ciudad, data.main.temp))
     });
 }
 

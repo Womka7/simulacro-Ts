@@ -3,10 +3,11 @@
 
 .card-container{
     width: 280px;
-    height: 320px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: relative;
+    // border: 2px solid red;
 
     .img-card{
         width: 100%;

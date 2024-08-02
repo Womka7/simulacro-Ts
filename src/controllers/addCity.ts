@@ -2,12 +2,21 @@ import { ICity } from "../models/ICity";
 import { CitiesController } from "./Cities.controller";
 
 //logout
+
+window.addEventListener('DOMContentLoaded', () =>{
+    if(!sessionStorage.getItem('token')){
+        window.location.href='/'
+    }
+});
+
 const LogoutButton = document.querySelector('#logout-button')as HTMLButtonElement;
 
 LogoutButton?.addEventListener('click',()=>{
     sessionStorage.removeItem('token');
     window.location.href = '/'
 })
+
+
 //logout
 
 const form = document.querySelector("#addCity-form") as HTMLFormElement;
